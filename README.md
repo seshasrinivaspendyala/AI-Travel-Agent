@@ -73,4 +73,4 @@ Open a new terminal and perform the following steps:
 8. Create and copy the SerpAPI, Google serper, Amadeus secret keys in .env file
 
 ## Sample execution on the AIPC GPU
-- AI Travel Agent(https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/Final_AI_Travel_Agent.ipynb)
+- [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/Final_AI_Travel_Agent.ipynb)
