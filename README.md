@@ -67,7 +67,7 @@ Open a new terminal and perform the following steps:
     `pip install -r requirements.txt`\
     `python -m ipykernel install --user --name=gpu_llmsycl`
 6. Navigate to the directory where the repository is cloned. Launch the Jupyter notebook.\
-    `cd /path/to/<cloned-repo>/`\ 
+    `cd /path/to/<cloned-repo>/` \
     `jupyter notebook`
 7. Download and copy the models under `./models` folder.
 8. Create and copy the SerpAPI, Google serper, Amadeus secret keys in .env file
