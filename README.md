@@ -74,4 +74,5 @@ Open a new terminal and perform the following steps:
 
 ## Sample execution on the AIPC GPU
 - [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/Final_AI_Travel_Agent.ipynb)
-- ![Deploying on Streamlit](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/1.png)(https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/2.png)
+  ![Deploying on Streamlit](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/1.png)
+  ![](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/2.png)
