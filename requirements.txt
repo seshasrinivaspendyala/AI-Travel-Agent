@@ -1,7 +1,0 @@
-amadeus
-google-search-results
-ipykernel
-jupyter
-langchain
-langchain-community
-streamlit
