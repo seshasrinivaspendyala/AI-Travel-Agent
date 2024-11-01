@@ -70,7 +70,7 @@ Open a new terminal and perform the following steps:
     `cd /path/to/<cloned-repo>/`
 7. Download the GGUF models under `./models` folder using huggingface-cli\
     `huggingface-cli download bartowski/Meta-Llama-3.1-8B-Instruct-GGUF --include "Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf" --local-dir ./models`\
-    `huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models`\
+    `huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models`
     - Syntax for downlading the other models\
     `huggingface-cli download <repo_id> <filename> --local-dir <directory>`
 8. Launch the Jupyter notebook.
