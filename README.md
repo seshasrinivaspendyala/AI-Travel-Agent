@@ -66,8 +66,10 @@ Open a new terminal as administrator (right-click the terminal icon and select '
 5. Setting up the jupyter lab and other pip packages\
     `pip install -r requirements.txt`\
     `python -m ipykernel install --user --name=gpu_llmsycl`
-6. Navigate to the directory where the repository is cloned.
-    `cd /path/to/<cloned-repo>/`
+6. **Clone the Repository**
+   ```
+   https://github.com/seshasrinivaspendyala/AI-Travel-Agent.git
+   ```
 7. Download the GGUF models under `./models` folder using huggingface-cli\
     `huggingface-cli download bartowski/Meta-Llama-3.1-8B-Instruct-GGUF --include "Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf" --local-dir ./models`\
     `huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models`
