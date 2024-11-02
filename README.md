@@ -53,9 +53,11 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
    ```
-2. Create and activate the conda environment\
-   `conda create -n gpu_llmsycl python=3.11`\
-   `conda activate gpu_llmsycl`
+2. **Create and activate the conda environment**
+   ```
+   conda create -n gpu_llmsycl python=3.11
+   conda activate gpu_llmsycl
+   ```
 4. Set the environment variables\
     `set CMAKE_GENERATOR=Ninja`\
     `set CMAKE_C_COMPILER=cl`\
