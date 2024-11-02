@@ -78,7 +78,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
 6. **Clone the Repository**
    ```
-   https://github.com/seshasrinivaspendyala/AI-Travel-Agent.git
+   git clone https://github.com/seshasrinivaspendyala/AI-Travel-Agent.git
    ```
 7. **Download the GGUF models under `./models` folder using huggingface-cli**
    ```
