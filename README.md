@@ -73,7 +73,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
     `huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models`
     - Syntax for downlading the other models\
     `huggingface-cli download <repo_id> <filename> --local-dir <directory>`
-8. Launch the Jupyter notebook.
+8. Launch the Jupyter notebook.\
     `jupyter notebook`
 9. Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file
 
