@@ -49,35 +49,37 @@ Download and install Miniconda from [here](https://github.com/conda-forge/minifo
 
 Open a new terminal as administrator (right-click the terminal icon and select 'Run as administrator') and perform the following steps:
 
-1. Setup oneAPI environment\
-   `@call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force`
+1. **Setup oneAPI environment**
+   ```
+   @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
+   ```
 2. Create and activate the conda environment\
    `conda create -n gpu_llmsycl python=3.11`\
    `conda activate gpu_llmsycl`
-3. Set the environment variables\
+4. Set the environment variables\
     `set CMAKE_GENERATOR=Ninja`\
     `set CMAKE_C_COMPILER=cl`\
     `set CMAKE_CXX_COMPILER=icx`\
     `set CXX=icx`\
     `set CC=cl`\
     `set CMAKE_ARGS="-DGGML_SYCL=ON -DGGML_SYCL_F16=ON -DCMAKE_CXX_COMPILER=icx -DCMAKE_C_COMPILER=cl"`
-4. Install Llamacpp-Python bindings\
+5. Install Llamacpp-Python bindings\
     `pip install llama-cpp-python -U --force --no-cache-dir --verbose`
-5. Setting up the jupyter lab and other pip packages\
+6. Setting up the jupyter lab and other pip packages\
     `pip install -r requirements.txt`\
     `python -m ipykernel install --user --name=gpu_llmsycl`
-6. **Clone the Repository**
+7. **Clone the Repository**
    ```
    https://github.com/seshasrinivaspendyala/AI-Travel-Agent.git
    ```
-7. Download the GGUF models under `./models` folder using huggingface-cli\
+8. Download the GGUF models under `./models` folder using huggingface-cli\
     `huggingface-cli download bartowski/Meta-Llama-3.1-8B-Instruct-GGUF --include "Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf" --local-dir ./models`\
     `huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models`
     - Syntax for downlading the other models\
     `huggingface-cli download <repo_id> <filename> --local-dir <directory>`
-8. Launch the Jupyter notebook.\
+9. Launch the Jupyter notebook.\
     `jupyter notebook`
-9. Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file
+10. Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file
 
 ## Sample execution on the AIPC GPU
 - [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb)
