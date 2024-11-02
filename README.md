@@ -89,7 +89,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    huggingface-cli download <repo_id> <filename> --local-dir <directory>
    ```
-8. **Launch the Jupyter notebook.**
+8. **Launch the Jupyter notebook**
    ```
    jupyter notebook
    ```
