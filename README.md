@@ -71,18 +71,18 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    pip install llama-cpp-python -U --force --no-cache-dir --verbose
    ```
-5. **Setting up the jupyter lab and other pip packages**
-   ```
-   pip install -r requirements.txt
-   python -m ipykernel install --user --name=gpu_llmsycl
-   ```
-6. **Clone the Repository**
+5. **Clone the Repository**
    ```
    git clone https://github.com/seshasrinivaspendyala/AI-Travel-Agent.git
    ```
-7. **Move into the cloned repository directory**
+6. **Move into the cloned repository directory**
    ```
    cd /path/to/<cloned-repo>/
+   ```
+7. **Setting up the jupyter lab and other pip packages**
+   ```
+   pip install -r requirements.txt
+   python -m ipykernel install --user --name=gpu_llmsycl
    ```
 8. **Download the GGUF models under `./models` folder using huggingface-cli**
    ```
