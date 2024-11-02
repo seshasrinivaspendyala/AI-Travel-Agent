@@ -47,7 +47,7 @@ Download and install Miniconda from [here](https://github.com/conda-forge/minifo
 
 ## Setting up environment and LlamaCPP-python GPU backend
 
-Open a new terminal and perform the following steps:
+Open a new terminal as administrator (right-click the terminal icon and select 'Run as administrator') and perform the following steps:
 
 1. Setup oneAPI environment\
    `@call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force`
