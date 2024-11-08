@@ -16,7 +16,7 @@ The following software are to be installed prior to the setting up of Llamacpp-p
 4. Microsoft Visual Studio Code
 5. OneAPI Basekit for Windows 
 6. Miniconda for Windows
-
+7. Git for Windows
 
 ### 1. GPU Drivers installation
 -	Download and Install the GPU driver from Intel® Arc™ & Iris® Xe Graphics - Windows* [link](https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)
@@ -43,7 +43,8 @@ Download and install OneAPI Basekit for Windows from [here](https://www.intel.co
 ### 6. Miniconda for Windows
 Download and install Miniconda from [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe)
 
-
+### 7. Git for Windows
+Download and install Git from [here](https://git-scm.com/downloads/win)
 
 ## Setting up environment and LlamaCPP-python GPU backend
 
