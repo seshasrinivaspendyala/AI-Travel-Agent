@@ -36,9 +36,9 @@ def create_llm():
     try:
         llm = LlamaCpp(
             model_path="./models/Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf",           # Path to the Llama model file
-            n_gpu_layers=32,                                                        # Number of layers to be loaded into gpu memory (default: 0)
+            n_gpu_layers=-1,                                                        # Number of layers to be loaded into gpu memory (default: 0)
             seed=512,                                                               # Random number generator (RNG) seed (default: -1, -1 = random seed)
-            n_ctx=8192,                                                             # Token context window (default: 512)
+            n_ctx=4096,                                                             # Token context window (default: 512)
             f16_kv=True,                                                            # Use half-precision for key/value cache (default: True)
             callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]),   # Pass the callback manager for output handling
             verbose=True,                                                           # Print verbose output (default: True)
