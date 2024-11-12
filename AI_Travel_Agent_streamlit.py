@@ -21,6 +21,7 @@ from langchain.agents import load_tools, AgentExecutor, StructuredChatAgent
 # Loading the secret API keys from a .env file into the environment.
 load_dotenv()
 
+@st.cache_resource
 def create_llm():
     """
     Create and initialize the LlamaCpp with the selected model. Model and hyperparameters can be changed based on the end user requirements. 
