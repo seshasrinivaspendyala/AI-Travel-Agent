@@ -103,9 +103,9 @@ Open a new terminal as administrator (right-click the terminal icon and select '
     ```
     jupyter notebook
     ```
-     - Open the [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb) file in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
+     - Open the [AI Travel Agent notebook file](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb) in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
   
-12. **Run the streamlit file using the below command**
+12. **Run the [AI Travel Agent streamlit file](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent_streamlit.py) using the below command**
     ```
     streamlit run AI_Travel_Agent_streamlit.py
     ```
