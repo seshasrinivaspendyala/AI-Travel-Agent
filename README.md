@@ -55,11 +55,19 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    conda create -n gpu_llmsycl python=3.11
    conda activate gpu_llmsycl
    ```
-2. **Setup oneAPI environment**
+2. **Clone the Repository**
+   ```
+   git clone https://github.com/seshasrinivaspendyala/AI-Travel-Agent.git
+   ```
+3. **Move into the cloned repository directory**
+   ```
+   cd /path/to/<cloned-repo>/
+   ```
+4. **Setup oneAPI environment**
    ```
    @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
    ```
-3. **Set the environment variables**
+5. **Set the environment variables**
    ```
    set CMAKE_GENERATOR=Ninja
    set CMAKE_C_COMPILER=cl
@@ -68,17 +76,9 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    set CC=cl
    set CMAKE_ARGS="-DGGML_SYCL=ON -DGGML_SYCL_F16=ON -DCMAKE_CXX_COMPILER=icx -DCMAKE_C_COMPILER=cl"
    ```
-4. **Install Llamacpp-Python bindings**
+6. **Install Llamacpp-Python bindings**
    ```
    pip install llama-cpp-python -U --force --no-cache-dir --verbose
-   ```
-5. **Clone the Repository**
-   ```
-   git clone https://github.com/seshasrinivaspendyala/AI-Travel-Agent.git
-   ```
-6. **Move into the cloned repository directory**
-   ```
-   cd /path/to/<cloned-repo>/
    ```
 7. **Setting up the jupyter lab and other pip packages**
    ```
