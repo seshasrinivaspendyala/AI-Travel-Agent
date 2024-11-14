@@ -50,14 +50,14 @@ Download and install Git from [here](https://git-scm.com/downloads/win)
 
 Open a new terminal as administrator (right-click the terminal icon and select 'Run as administrator') and perform the following steps:
 
-1. **Setup oneAPI environment**
-   ```
-   @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
-   ```
-2. **Create and activate the conda environment**
+1. **Create and activate the conda environment**
    ```
    conda create -n gpu_llmsycl python=3.11
    conda activate gpu_llmsycl
+   ```
+2. **Setup oneAPI environment**
+   ```
+   @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
    ```
 3. **Set the environment variables**
    ```
@@ -94,12 +94,19 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    huggingface-cli download <repo_id> <filename> --local-dir <directory>
    ```
-9. **Launch the Jupyter notebook**
-   ```
-   jupyter notebook
-   ```
-10. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
+9. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
 
+10. **Launch the Jupyter notebook using the below command**
+    ```
+    jupyter notebook
+    ```
+     - Open the AI_Travel_Agent.ipynb file in the jupyter notebook, select the gpu_llmsycl kernel and run the cells one by one in the notebook.
+  
+11. **Run the streamlit file using the below command**
+    ```
+    streamlit run AI_Travel_Agent_streamlit.py
+    ```
+    
 ## Sample execution on the AIPC GPU
 - [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb)
 - **Deploying on Streamlit**
