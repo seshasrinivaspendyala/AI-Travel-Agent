@@ -63,7 +63,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    cd /path/to/<cloned-repo>/
    ```
-4. **Setup oneAPI environment**
+4. **Initialize oneAPI environment**
    ```
    @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
    ```
