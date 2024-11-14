@@ -83,6 +83,8 @@ Open a new terminal as administrator (right-click the terminal icon and select '
 7. **Setting up the jupyter lab and other pip packages**
    ```
    pip install -r requirements.txt
+   ```
+   ```
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
 8. **Download the GGUF models under `./models` folder using huggingface-cli**
