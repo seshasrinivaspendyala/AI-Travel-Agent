@@ -52,7 +52,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
 
 1. **Create and activate the conda environment**
    ```
-   conda create -n gpu_llmsycl python=3.11
+   conda create -n gpu_llmsycl python=3.11 -y
    conda activate gpu_llmsycl
    ```
 2. **Clone the Repository**
