@@ -80,14 +80,15 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    pip install llama-cpp-python -U --force --no-cache-dir --verbose
    ```
-7. **Setting up the jupyter lab and other pip packages**
+7. **Install the required pip packages**
    ```
    pip install -r requirements.txt
    ```
+8. **Install a ipykernel to select the gpu_llmsycl environment**
    ```
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
-8. **Download the GGUF models under `./models` folder using huggingface-cli**
+9. **Download the GGUF models under `./models` folder using huggingface-cli**
    ```
    huggingface-cli download bartowski/Meta-Llama-3.1-8B-Instruct-GGUF --include "Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf" --local-dir ./models
    huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models
@@ -96,15 +97,15 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    huggingface-cli download <repo_id> <filename> --local-dir <directory>
    ```
-9. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
+10. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
 
-10. **Launch the Jupyter notebook using the below command**
+11. **Launch the Jupyter notebook using the below command**
     ```
     jupyter notebook
     ```
      - Open the [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb) file in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
   
-11. **Run the streamlit file using the below command**
+12. **Run the streamlit file using the below command**
     ```
     streamlit run AI_Travel_Agent_streamlit.py
     ```
