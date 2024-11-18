@@ -14,9 +14,10 @@ from langchain_core.callbacks import CallbackManager, StreamingStdOutCallbackHan
 from langchain_community.utilities import GoogleSerperAPIWrapper
 from langchain_core.tools import Tool
 from langchain_community.agent_toolkits.amadeus.toolkit import AmadeusToolkit
-from langchain.tools.amadeus.closest_airport import AmadeusClosestAirport
-from langchain.tools.amadeus.flight_search import AmadeusFlightSearch
-from langchain.agents import load_tools, AgentExecutor, StructuredChatAgent
+from langchain_community.tools.amadeus.closest_airport import AmadeusClosestAirport
+from langchain_community.tools.amadeus.flight_search import AmadeusFlightSearch
+from langchain.agents import AgentExecutor, StructuredChatAgent
+from langchain_community.agent_toolkits.load_tools import load_tools
 
 # Loading the secret API keys from a .env file into the environment.
 load_dotenv()
@@ -46,6 +47,7 @@ def create_llm():
             temperature=0,                                                          # Temperature controls the randomness of generated text during sampling (default: 0.8)
             top_p=0.95,                                                             # Top-p sampling picks the next token from top choices with a combined probability ≥ p (default: 0.95)      
             n_batch=512,                                                            # Number of tokens to process in parallel (default: 8)
+        
         )
         llm.client.verbose = False                                                  # Print verbose state information (default: True). Disabling verbose client output here.
         
@@ -74,10 +76,10 @@ def get_google_search_tools():
             name="Google Search tool",
             func=search.run,
             description="useful for when you need to ask with search",
-        )   
-    
-        tools = [google_search_tool] + load_tools(["serpapi"]) 
-    
+        )
+        
+        tools = [google_search_tool] + load_tools(["serpapi"])
+        
         return tools
     except Exception as e:
         st.error(f"Error loading the google search tool: {e}")
@@ -222,6 +224,7 @@ def run_agent(agent, tools):
         st.error(f"An error occurred: {e}")
 
     
+import pprint
 
 # Streamlit code starts here
 # Main title and description
@@ -239,14 +242,17 @@ def streamlit_UI():
     # Sidebar with questions on the UI
     st.sidebar.title(":bulb: Example Queries")
     st.sidebar.write("Here are some questions you can ask:")
-    st.sidebar.markdown("""
-    - **What are the major airlines that operate to London?**
-    - **Can you give me the best places to celebrate Holi in India?**
-    - **What is the distance between eiffel tower and the Paris CDG airport?**
-    - **Give me the cheapest flight details which is available on 8th February 2025 from Hyderabad to Bangkok.**
-    - **What are the best places to visit in Spain?**
-    """)
-    
+    predefined_questions = [
+        "What are the major airlines that operate to London?", 
+        "Can you give me the best places to celebrate Holi in India?", 
+        "What is the distance between eiffel tower and the Paris CDG airport?",
+        "Give me the cheapest flight details which is available on 8th February 2025 from Hyderabad to Bangkok.",
+        "What are the best places to visit in Spain?"
+    ]
+
+    # Store the selected question from sidebar
+    selected_sidebar_question = st.sidebar.radio("Choose a Question", predefined_questions)
+
     # For important notes
     st.markdown("#### **:warning: Important Notes**")
     st.write("""
@@ -257,10 +263,11 @@ def streamlit_UI():
     # Additional instruction in a block quote
     st.markdown("> **:notebook: Quick Tip:** Check the **side-bar** for more examples to guide you!")
 
+    # creating columns
     col1, col2 = st.columns([6, 1])
 
     with col1:
-        question = st.text_area("")
+        question = st.text_area("", value=selected_sidebar_question, key="question_input")
     with col2:
         st.write("")
         st.write("")
@@ -271,12 +278,21 @@ def streamlit_UI():
         if not question.isdigit() and re.search(r'[A-Za-z]', question):
             try:
                 with st.spinner("Generating answer..."):
-                    response = agent_executor.invoke({"input": question})
-            
+                    with st.expander("Agent Execution", expanded=True):
+                        # Create placeholder for streaming output
+                        response_placeholder = st.empty()
+
+                        chunks = []        
+                        for chunk in agent_executor.stream({"input": question}):
+                            chunks.append(chunk)
+                            st.write(chunk)
+                    
+                    #response = agent_executor.invoke({"input": question})
+
                     placeholder = st.empty()
-                    content = response['output']
+                    content = chunks[2]['output']
             
-                    words = re.split(r'(\s+)', content)
+                    words = re.split(r'(\s+|\n)', content)
             
                     accumulated_text = ""
             
@@ -285,7 +301,7 @@ def streamlit_UI():
                         placeholder.write(accumulated_text)
                         time.sleep(0.01)
             except Exception as e:
-                st.error(f"An error occurred: {e}")
+                st.error(f"An error occurred: {e}") 
         else:
             st.error(f"Invalid question input. Please enter a valid question.")
         
@@ -304,6 +320,7 @@ try:
     AmadeusFlightSearch.model_rebuild()
     
     tools = get_google_search_tools() + amadeus_toolkit.get_tools()
+
 except Exception as e:
     st.error(f"Error loading the amadeus toolkit : {e}")
 
