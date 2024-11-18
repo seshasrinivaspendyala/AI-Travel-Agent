@@ -223,8 +223,6 @@ def run_agent(agent, tools):
     except Exception as e:
         st.error(f"An error occurred: {e}")
 
-    
-import pprint
 
 # Streamlit code starts here
 # Main title and description
