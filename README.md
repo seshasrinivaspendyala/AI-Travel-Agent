@@ -78,7 +78,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
 6. **Install Llamacpp-Python bindings**
    ```
-   pip install llama-cpp-python -U --force --no-cache-dir --verbose
+   pip install llama-cpp-python==0.3.1 -U --force --no-cache-dir --verbose
    ```
 7. **Install the required pip packages**
    ```
