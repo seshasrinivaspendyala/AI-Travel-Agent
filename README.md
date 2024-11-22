@@ -113,5 +113,5 @@ Open a new terminal as administrator (right-click the terminal icon and select '
 ## Sample execution on the AIPC GPU
 - [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb)
 - **Deploying on Streamlit**
-  ![Deploying on Streamlit 1](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/1.png)
-  ![Deploying on Streamlit 2](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/2.png)
+  ![Deploying on Streamlit 1](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/streamlit_app_output_1.png)
+  ![Deploying on Streamlit 2](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/streamlit_app_output_2.png)
