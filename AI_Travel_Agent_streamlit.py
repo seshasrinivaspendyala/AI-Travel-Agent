@@ -243,8 +243,8 @@ def streamlit_UI():
     predefined_questions = [
         "What are the major airlines that operate to London?", 
         "Where is the best place to see the Lantern Festival 2024 in Thailand?", 
-        "What is the distance between eiffel tower and the Paris CDG airport?",
-        "What are the cheapest flight details available to travel from Dubai to New york available on 20th January 2025?",
+        "What's the height of the Burj Khalifa in Dubai?",
+        "Provide the cheapest flight information to travel from New York to Germany on 15th February 2025.",
         "What are the best places to visit in Spain?"
     ]
 
