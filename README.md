@@ -4,9 +4,13 @@
 This section of AIPC Samples showcases how to deploy local LLM agents using the Langchain tools on Intel® Core™ Ultra Processors. The aim is to deploy an Agent on the iGPU (integrated GPU) of the AIPC. For this, Llamacpp GPU backend for SYCL is setup and the agent created using the local LLM model. The agent makes use of langchain toolkits and tools for user queries. 
 
 ### Table of Contents
-1. Installing Prerequisites
-2. Setting up environment and LlamaCPP-python GPU backend
-3. Sample execution on the AIPC GPU
+1. AI Travel Agent Workflow
+2. Installing Prerequisites
+3. Setting up environment and LlamaCPP-python GPU backend
+4. Sample execution on the AIPC GPU
+
+### AI Travel Agent Workflow
+![How it works](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent_Workflow.png)
 
 ## Installing Prerequisites
 The following software are to be installed prior to the setting up of Llamacpp-python SYCL backend
