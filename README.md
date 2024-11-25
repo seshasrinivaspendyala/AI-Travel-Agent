@@ -99,15 +99,15 @@ Open a new terminal as administrator (right-click the terminal icon and select '
     ```
     jupyter notebook
     ```
-     - Open the [AI Travel Agent notebook file](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb) in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
+     - Open the [AI Travel Agent notebook file](./AI_Travel_Agent.ipynb) in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
   
-10. **Run the [AI Travel Agent streamlit file](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent_streamlit.py) using the below command**
+10. **Run the [AI Travel Agent streamlit file](./AI_Travel_Agent_streamlit.py) using the below command**
     ```
     streamlit run AI_Travel_Agent_streamlit.py
     ```
     
 ## Sample execution on the AIPC GPU
-- [AI Travel Agent](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/AI_Travel_Agent.ipynb)
+- [AI Travel Agent](./AI_Travel_Agent.ipynb)
 - **Deploying on Streamlit**
-  ![Deploying on Streamlit 1](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/streamlit_app_output_1.png)
-  ![Deploying on Streamlit 2](https://github.com/seshasrinivaspendyala/AI-Travel-Agent/blob/main/streamlit_app_output_2.png)
+  ![Deploying on Streamlit 1](./assets/streamlit_app_output_1.png)
+  ![Deploying on Streamlit 2](./assets/streamlit_app_output_2.png)
