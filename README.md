@@ -10,7 +10,7 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 4. Sample execution on the AIPC GPU
 
 ### AI Travel Agent Workflow
-![How it works](./AI_Travel_Agent_Workflow.png)
+![How it works](./assets/AI_Travel_Agent_Workflow.png)
 
 ## Installing Prerequisites
 The following software are to be installed prior to the setting up of Llamacpp-python SYCL backend
