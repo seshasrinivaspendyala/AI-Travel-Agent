@@ -1,6 +1,6 @@
 # Deploying Local LLM agent on AIPC
 
-#### Introduction
+## Introduction
 This section of AIPC Samples showcases how to deploy local LLM agents using the Langchain tools on Intel® Core™ Ultra Processors. The aim is to deploy an Agent on the iGPU (integrated GPU) of the AIPC. For this, Llamacpp GPU backend for SYCL is setup and the agent created using the local LLM model. The agent makes use of langchain toolkits and tools for user queries. 
 
 ### Table of Contents
@@ -25,7 +25,7 @@ The following software are to be installed prior to the setting up of Llamacpp-p
 6. Miniconda for Windows
 7. Git for Windows
 
-### 1. GPU Drivers installation
+1. **GPU Drivers installation**
 -	Download and Install the GPU driver from Intel® Arc™ & Iris® Xe Graphics - Windows* [link](https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)
 - (Optional) Download and Install the NPU driver from [here](https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html)
 - For NPU, if the Neural processor is not available, Check the PCI device to update the driver.
@@ -33,24 +33,24 @@ The following software are to be installed prior to the setting up of Llamacpp-p
 
 **IMPORTANT:** Reboot the system after the installation
 
-### 2. CMake for windows 
+2. **CMake for windows**
 Download and install the latest CMake for Windows from [here](https://cmake.org/download/)
 
-### 3. Microsoft Visual Studio 2022 community version 
+3. **Microsoft Visual Studio 2022 community version** 
 Download and install VS 2022 community from [here](https://visualstudio.microsoft.com/downloads/)  
 \
 **IMPORTANT:** Please select "Desktop Development with C++" option while installing Visual studio
 
-### 4. Microsoft Visual Studio Code  
+4. **Microsoft Visual Studio Code**
 Download and install Microsoft Visual Studio Code from [here](https://code.visualstudio.com/Download)
 
-### 5. OneAPI Basekit for Windows 
+5. **OneAPI Basekit for Windows**
 Download and install OneAPI Basekit for Windows from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=windows&windows-install-type=offline)
 
-### 6. Miniconda for Windows
+6. **Miniconda for Windows**
 Download and install Miniconda from [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe)
 
-### 7. Git for Windows
+7. **Git for Windows**
 Download and install Git from [here](https://git-scm.com/downloads/win)
 
 ### Linux:
