@@ -17,14 +17,6 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 ## Installing Prerequisites
 ### Windows:
 The following software are to be installed prior to the setting up of Llamacpp-python SYCL backend
-1. GPU Drivers 
-2. CMake
-3. Microsoft Visual Studio 2022 community version 
-4. Microsoft Visual Studio Code
-5. OneAPI Basekit for Windows 
-6. Miniconda for Windows
-7. Git for Windows
-
 1. **GPU Drivers installation**
 -	Download and Install the GPU driver from Intel® Arc™ & Iris® Xe Graphics - Windows* [link](https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)
 - (Optional) Download and Install the NPU driver from [here](https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html)
