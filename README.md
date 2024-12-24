@@ -23,7 +23,7 @@ The following software are to be installed prior to the setting up of Llamacpp-p
     - For NPU, if the Neural processor is not available, Check the PCI device to update the driver.
       Follow this document [NPU_Win_Release_Notes_v2540.pdf](https://downloadmirror.intel.com/825735/NPU_Win_Release_Notes_v2540.pdf)
 
-**IMPORTANT:** Reboot the system after the installation
+    **IMPORTANT:** Reboot the system after the installation
 
 2. **CMake for windows**\
 Download and install the latest CMake for Windows from [here](https://cmake.org/download/)
