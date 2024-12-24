@@ -18,10 +18,10 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 ### Windows:
 The following software are to be installed prior to the setting up of Llamacpp-python SYCL backend
 1. **GPU Drivers installation**
--	Download and Install the GPU driver from Intel® Arc™ & Iris® Xe Graphics - Windows* [link](https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)
-- (Optional) Download and Install the NPU driver from [here](https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html)
-- For NPU, if the Neural processor is not available, Check the PCI device to update the driver.
-  Follow this document [NPU_Win_Release_Notes_v2540.pdf](https://downloadmirror.intel.com/825735/NPU_Win_Release_Notes_v2540.pdf)
+    - Download and Install the GPU driver from Intel® Arc™ & Iris® Xe Graphics - Windows* [link](https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)
+    - (Optional) Download and Install the NPU driver from [here](https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html)
+    - For NPU, if the Neural processor is not available, Check the PCI device to update the driver.
+      Follow this document [NPU_Win_Release_Notes_v2540.pdf](https://downloadmirror.intel.com/825735/NPU_Win_Release_Notes_v2540.pdf)
 
 **IMPORTANT:** Reboot the system after the installation
 
