@@ -1,4 +1,4 @@
-# Deploying Local LLM agent on AIPC
+![image](https://github.com/user-attachments/assets/f94a1fc7-e87d-424e-bac9-cb3eb0e9e4a8)![image](https://github.com/user-attachments/assets/cf197406-c854-4cbe-b313-30cd0ebfea98)# Deploying Local LLM agent on AIPC
 
 ## Introduction
 This section of AIPC Samples showcases how to deploy local LLM agents using the Langchain tools on Intel® Core™ Ultra Processors. The aim is to deploy an Agent on the iGPU (integrated GPU) of the AIPC. For this, Llamacpp GPU backend for SYCL is setup and the agent created using the local LLM model. The agent makes use of langchain toolkits and tools for user queries. 
@@ -6,6 +6,8 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 ### Table of Contents
 1. AI Travel Agent Workflow
 2. Installing Prerequisites
+   - Windows
+   - Linux
 3. Setting up environment and LlamaCPP-python GPU backend
 4. Sample execution on the AIPC GPU
 
@@ -60,10 +62,16 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    conda activate gpu_llmsycl
    ```
 2. **Initialize oneAPI environment**
+   On Windows:
    ```
    @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
    ```
-3. **Set the environment variables**
+   On Linux:
+   ```
+   source /opt/intel/oneapi/setvars.sh --force
+   ```
+3. **Set the environment variables and install Llamacpp-Python bindings**
+   On Windows:
    ```
    set CMAKE_GENERATOR=Ninja
    set CMAKE_C_COMPILER=cl
@@ -71,20 +79,21 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    set CXX=icx
    set CC=cl
    set CMAKE_ARGS="-DGGML_SYCL=ON -DGGML_SYCL_F16=ON -DCMAKE_CXX_COMPILER=icx -DCMAKE_C_COMPILER=cl"
-   ```
-4. **Install Llamacpp-Python bindings**
-   ```
    pip install llama-cpp-python==0.3.1 -U --force --no-cache-dir --verbose
    ```
-5. **Install the required pip packages**
+   On Linux:
+   ```
+   CMAKE_ARGS="-DGGML_SYCL=on -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx" pip install llama-cpp-python==0.3.1 -U --force --no-cache-dir --verbose
+   ```
+6. **Install the required pip packages**
    ```
    pip install -r requirements.txt
    ```
-6. **Install a ipykernel to select the gpu_llmsycl environment**
+7. **Install a ipykernel to select the gpu_llmsycl environment**
    ```
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
-7. **Download the GGUF models under `./models` folder using huggingface-cli**
+8. **Download the GGUF models under `./models` folder using huggingface-cli**
    ```
    huggingface-cli download bartowski/Meta-Llama-3.1-8B-Instruct-GGUF --include "Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf" --local-dir ./models
    huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models
@@ -93,15 +102,15 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    huggingface-cli download <repo_id> <filename> --local-dir <directory>
    ```
-8. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
+9. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
 
-9. **Launch the Jupyter notebook using the below command**
+10. **Launch the Jupyter notebook using the below command**
     ```
     jupyter notebook
     ```
-     - Open the [AI Travel Agent notebook file](./AI_Travel_Agent.ipynb) in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
+     - Open the [AI Travel Agent notebook file](./AI_Travel_Agent.ipynb) and [Agent using Custom tools notebook file](./LLM_Agent_with_custom_tools.ipynb) in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
   
-10. **Run the [AI Travel Agent streamlit file](./AI_Travel_Agent_streamlit.py) using the below command**
+11. **Run the [AI Travel Agent streamlit file](./AI_Travel_Agent_streamlit.py) using the below command**
     ```
     streamlit run AI_Travel_Agent_streamlit.py
     ```
