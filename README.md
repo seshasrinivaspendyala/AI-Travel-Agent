@@ -25,29 +25,42 @@ The following software are to be installed prior to the setting up of Llamacpp-p
 
 **IMPORTANT:** Reboot the system after the installation
 
-2. **CMake for windows**
+2. **CMake for windows**\
 Download and install the latest CMake for Windows from [here](https://cmake.org/download/)
 
 3. **Microsoft Visual Studio 2022 community version**\
 Download and install VS 2022 community from [here](https://visualstudio.microsoft.com/downloads/)\
 **IMPORTANT:** Please select "Desktop Development with C++" option while installing Visual studio
 
-4. **Microsoft Visual Studio Code**
+4. **Microsoft Visual Studio Code**\
 Download and install Microsoft Visual Studio Code from [here](https://code.visualstudio.com/Download)
 
-5. **OneAPI Basekit for Windows**
+5. **OneAPI Basekit for Windows**\
 Download and install OneAPI Basekit for Windows from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=windows&windows-install-type=offline)
 
-6. **Miniconda for Windows**
+6. **Miniconda for Windows**\
 Download and install Miniconda from [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe)
 
-7. **Git for Windows**
+7. **Git for Windows**\
 Download and install Git from [here](https://git-scm.com/downloads/win)
 
 ### Linux:
 
-1. **GPU Drivers installation**
-   - Download and install the 
+1. **GPU Drivers installation**\
+Download and install the GPU drivers from [here](https://dgpu-docs.intel.com/driver/client/overview.html)
+
+2. **Miniconda for Linux**\
+Download, install the Miniconda using the below commands. 
+    ```
+    wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+    bash Miniforge3-$(uname)-$(uname -m).sh
+    cd </move/to/miniforge3/bin/folder> 
+    ./conda init 
+    ```
+Initialize the conda environment and restart the terminal.
+
+3. **OneAPI Basekit for Linux**\
+Download and install OneAPI Basekit for Linux from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline)
 
 ## Setting up environment and LlamaCPP-python GPU backend
 
