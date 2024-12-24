@@ -28,7 +28,7 @@ The following software are to be installed prior to the setting up of Llamacpp-p
 2. **CMake for windows**
 Download and install the latest CMake for Windows from [here](https://cmake.org/download/)
 
-3. **Microsoft Visual Studio 2022 community version** 
+3. **Microsoft Visual Studio 2022 community version**\
 Download and install VS 2022 community from [here](https://visualstudio.microsoft.com/downloads/)\
 **IMPORTANT:** Please select "Desktop Development with C++" option while installing Visual studio
 
