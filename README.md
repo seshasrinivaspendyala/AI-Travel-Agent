@@ -14,7 +14,8 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 ### AI Travel Agent Workflow
 ![How it works](./assets/AI_Travel_Agent_Workflow.png)
 
-## Installing Prerequisites
+### Installing Prerequisites
+## Windows:
 The following software are to be installed prior to the setting up of Llamacpp-python SYCL backend
 1. GPU Drivers 
 2. CMake
@@ -52,6 +53,11 @@ Download and install Miniconda from [here](https://github.com/conda-forge/minifo
 ### 7. Git for Windows
 Download and install Git from [here](https://git-scm.com/downloads/win)
 
+## Linux:
+
+
+### 1. GPU Drivers installation
+
 ## Setting up environment and LlamaCPP-python GPU backend
 
 Open a new terminal as administrator (right-click the terminal icon and select 'Run as administrator') and perform the following steps:
@@ -85,15 +91,15 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    CMAKE_ARGS="-DGGML_SYCL=on -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx" pip install llama-cpp-python==0.3.1 -U --force --no-cache-dir --verbose
    ```
-6. **Install the required pip packages**
+4. **Install the required pip packages**
    ```
    pip install -r requirements.txt
    ```
-7. **Install a ipykernel to select the gpu_llmsycl environment**
+5. **Install a ipykernel to select the gpu_llmsycl environment**
    ```
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
-8. **Download the GGUF models under `./models` folder using huggingface-cli**
+6. **Download the GGUF models under `./models` folder using huggingface-cli**
    ```
    huggingface-cli download bartowski/Meta-Llama-3.1-8B-Instruct-GGUF --include "Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf" --local-dir ./models
    huggingface-cli download bartowski/Qwen2.5-7B-Instruct-GGUF --include "Qwen2.5-7B-Instruct-Q4_K_S.gguf" --local-dir ./models
@@ -102,15 +108,15 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    huggingface-cli download <repo_id> <filename> --local-dir <directory>
    ```
-9. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
+7. **Create and copy the ([Amadeus toolkit](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335), [SerpAPI](https://serpapi.com/), [GoogleSearchAPIWrapper](https://serper.dev/)) secret API keys in .env file**
 
-10. **Launch the Jupyter notebook using the below command**
+8. **Launch the Jupyter notebook using the below command**
     ```
     jupyter notebook
     ```
      - Open the [AI Travel Agent notebook file](./AI_Travel_Agent.ipynb) and [Agent using Custom tools notebook file](./LLM_Agent_with_custom_tools.ipynb) in the jupyter notebook, select the gpu_llmsycl kernel and run the code cells one by one in the notebook.
   
-11. **Run the [AI Travel Agent streamlit file](./AI_Travel_Agent_streamlit.py) using the below command**
+9. **Run the [AI Travel Agent streamlit file](./AI_Travel_Agent_streamlit.py) using the below command**
     ```
     streamlit run AI_Travel_Agent_streamlit.py
     ```
