@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f94a1fc7-e87d-424e-bac9-cb3eb0e9e4a8)![image](https://github.com/user-attachments/assets/cf197406-c854-4cbe-b313-30cd0ebfea98)# Deploying Local LLM agent on AIPC
+# Deploying Local LLM agent on AIPC
 
 ## Introduction
 This section of AIPC Samples showcases how to deploy local LLM agents using the Langchain tools on Intel® Core™ Ultra Processors. The aim is to deploy an Agent on the iGPU (integrated GPU) of the AIPC. For this, Llamacpp GPU backend for SYCL is setup and the agent created using the local LLM model. The agent makes use of langchain toolkits and tools for user queries. 
@@ -61,7 +61,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    conda create -n gpu_llmsycl python=3.11 -y
    conda activate gpu_llmsycl
    ```
-2. **Initialize oneAPI environment**
+2. **Initialize oneAPI environment**\
    On Windows:
    ```
    @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 --force
@@ -70,7 +70,7 @@ Open a new terminal as administrator (right-click the terminal icon and select '
    ```
    source /opt/intel/oneapi/setvars.sh --force
    ```
-3. **Set the environment variables and install Llamacpp-Python bindings**
+3. **Set the environment variables and install Llamacpp-Python bindings**\
    On Windows:
    ```
    set CMAKE_GENERATOR=Ninja
