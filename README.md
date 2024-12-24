@@ -6,8 +6,8 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 ### Table of Contents
 1. AI Travel Agent Workflow
 2. Installing Prerequisites
-  - Windows
-  - Linux
+    - Windows
+    - Linux
 3. Setting up environment and LlamaCPP-python GPU backend
 4. Sample execution on the AIPC GPU
 
