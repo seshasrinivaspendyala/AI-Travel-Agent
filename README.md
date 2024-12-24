@@ -47,8 +47,8 @@ Download and install Git from [here](https://git-scm.com/downloads/win)
 
 ### Linux:
 
-
 1. **GPU Drivers installation**
+   - Download and install the 
 
 ## Setting up environment and LlamaCPP-python GPU backend
 
