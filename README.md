@@ -35,8 +35,8 @@ Download and install VS 2022 community from [here](https://visualstudio.microsof
 4. **Microsoft Visual Studio Code**\
 Download and install Microsoft Visual Studio Code from [here](https://code.visualstudio.com/Download)
 
-5. **OneAPI Basekit for Windows**\
-Download and install OneAPI Basekit for Windows from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=windows&windows-install-type=offline)
+5. **Intel oneAPI Base Toolkit for Windows**\
+Download and install Intel oneAPI Base Toolkit for Windows from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=windows&windows-install-type=offline)
 
 6. **Miniconda for Windows**\
 Download and install Miniconda from [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe)
@@ -59,8 +59,8 @@ Download, install the Miniconda using the below commands.
     ```
     Initialize the conda environment and restart the terminal.
 
-3. **OneAPI Basekit for Linux**\
-Download and install OneAPI Basekit for Linux from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline)
+3. **Intel oneAPI Base Toolkit for Linux**\
+Download and install Intel oneAPI Base Toolkit for Linux from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline)
 
 ## Setting up environment and LlamaCPP-python GPU backend
 
