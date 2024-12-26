@@ -57,7 +57,7 @@ Download, install the Miniconda using the below commands.
     cd </move/to/miniforge3/bin/folder> 
     ./conda init 
     ```
-    Initialize the conda environment and restart the terminal.
+    Replace </move/to/miniforge3/bin/folder> with your actual Miniforge bin folder path and run the cd command to go there. Initialize the conda environment and restart the terminal.
 
 3. **Intel oneAPI Base Toolkit for Linux**\
 Download and install Intel oneAPI Base Toolkit for Linux from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline)
